@@ -18,15 +18,21 @@
       <feGaussianBlur stdDeviation="4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    
+    <filter id="lineglow" filterUnits="userSpaceOnUse" x="0" y="0" width="900" height="64">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
     <clipPath id="card"><rect width="900" height="64" rx="12"/></clipPath>
     <linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
   </defs>
   <g clip-path="url(#card)">
     <rect width="900" height="64" fill="#0b1022"/>
     <g class="sweep"><rect x="-120" width="120" height="64" fill="url(#shine)"/></g>
-    <g stroke="url(#neon)" stroke-width="2" filter="url(#glow)">
-      <line x1="24" x2="270" y1="32" y2="32"/>
-      <line x1="630" x2="876" y1="32" y2="32"/>
+    <!-- rects, not lines: a horizontal line has a zero-height bbox, so an objectBoundingBox gradient/filter paints nothing -->
+    <g fill="url(#neon)" filter="url(#lineglow)">
+      <rect x="24" y="30" width="246" height="2"/>
+      <rect x="630" y="30" width="246" height="2"/>
     </g>
     <g class="flicker"><text x="450" y="42" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="28" font-weight="800" letter-spacing="4" fill="url(#neon)" filter="url(#glow)" textLength="312" lengthAdjust="spacingAndGlyphs">SELECT STAGE</text></g>
     

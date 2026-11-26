@@ -41,6 +41,11 @@
       <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     
+    <filter id="lineglow" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="300">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
       <rect width="4" height="1" fill="#000" opacity="0.28"/>
     </pattern>
@@ -89,7 +94,7 @@
       <line x1="0" x2="1200" y1="272.4" y2="272.4"><animate attributeName="y1" values="272.4;274.5;276.7;278.9;281.1;283.4;285.7;288.0;290.3;292.7;295.1;297.5;300.0" dur="2.4s" repeatCount="indefinite"/><animate attributeName="y2" values="272.4;274.5;276.7;278.9;281.1;283.4;285.7;288.0;290.3;292.7;295.1;297.5;300.0" dur="2.4s" repeatCount="indefinite"/></line>
     </g>
     <rect y="196" width="1200" height="104" fill="url(#floorFade)"/>
-    <line x1="0" x2="1200" y1="196" y2="196" stroke="#00f0ff" stroke-width="2" filter="url(#glow)"/>
+    <line x1="0" x2="1200" y1="196" y2="196" stroke="#00f0ff" stroke-width="2" filter="url(#lineglow)"/>
 
     <g font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="16" font-weight="700" letter-spacing="3">
       <text x="34" y="44" fill="#ff2bd6">1UP</text>

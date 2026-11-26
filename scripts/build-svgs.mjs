@@ -54,8 +54,10 @@ function clip(str, max) {
   return out + "…";
 }
 
-const glowFilter = (id, std = 4) => `
-    <filter id="${id}" x="-30%" y="-80%" width="160%" height="260%">
+// Pass `area` ({ w, h }) for thin lines: a bbox-relative filter region on a 0-2px tall shape
+// is empty or clips the blur, so the line vanishes. userSpaceOnUse covers the whole canvas instead.
+const glowFilter = (id, std = 4, area = null) => `
+    <filter id="${id}" ${area ? `filterUnits="userSpaceOnUse" x="0" y="0" width="${area.w}" height="${area.h}"` : `x="-30%" y="-80%" width="160%" height="260%"`}>
       <feGaussianBlur stdDeviation="${std}" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>`;
@@ -154,6 +156,7 @@ function headerSvg(cfg) {
     ${neonGradient("neon")}
     ${glowFilter("glow", 5)}
     ${glowFilter("soft", 2.5)}
+    ${glowFilter("lineglow", 5, { w: W, h: H })}
     ${scanlines("scan")}
     <clipPath id="card"><rect width="${W}" height="${H}" rx="20"/></clipPath>
     <clipPath id="sky"><rect width="${W}" height="${horizon}"/></clipPath>
@@ -170,7 +173,7 @@ function headerSvg(cfg) {
       ${rows.join("\n      ")}
     </g>
     <rect y="${horizon}" width="${W}" height="${H - horizon}" fill="url(#floorFade)"/>
-    <line x1="0" x2="${W}" y1="${horizon}" y2="${horizon}" stroke="${C.cyan}" stroke-width="2" filter="url(#glow)"/>
+    <line x1="0" x2="${W}" y1="${horizon}" y2="${horizon}" stroke="${C.cyan}" stroke-width="2" filter="url(#lineglow)"/>
 
     <g font-family="${MONO}" font-size="16" font-weight="700" letter-spacing="3">
       <text x="34" y="44" fill="${C.magenta}">1UP</text>
@@ -309,7 +312,10 @@ function typingSvg(cfg) {
 // ---------------------------------------------------------------- neon section heading
 function headingSvg(label, sub) {
   const W = 900;
-  const H = 64;
+  // Taller when there is a subtitle, so the small credit line never touches the title's glow.
+  const H = sub ? 74 : 64;
+  const ty = 42; // title baseline
+  const ly = ty - 11; // decor lines sit at the title's optical centre
   const len = Math.min(560, cells(label) * 26);
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="title">
   <title id="title">${esc(label)}</title>
@@ -322,18 +328,20 @@ function headingSvg(label, sub) {
   <defs>
     ${neonGradient("neon")}
     ${glowFilter("glow", 4)}
+    ${glowFilter("lineglow", 4, { w: W, h: H })}
     <clipPath id="card"><rect width="${W}" height="${H}" rx="12"/></clipPath>
     <linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
   </defs>
   <g clip-path="url(#card)">
     <rect width="${W}" height="${H}" fill="${C.panel}"/>
     <g class="sweep"><rect x="-120" width="120" height="${H}" fill="url(#shine)"/></g>
-    <g stroke="url(#neon)" stroke-width="2" filter="url(#glow)">
-      <line x1="24" x2="${W / 2 - len / 2 - 24}" y1="${H / 2}" y2="${H / 2}"/>
-      <line x1="${W / 2 + len / 2 + 24}" x2="${W - 24}" y1="${H / 2}" y2="${H / 2}"/>
+    <!-- rects, not lines: a horizontal line has a zero-height bbox, so an objectBoundingBox gradient/filter paints nothing -->
+    <g fill="url(#neon)" filter="url(#lineglow)">
+      <rect x="24" y="${ly - 1}" width="${W / 2 - len / 2 - 48}" height="2"/>
+      <rect x="${W / 2 + len / 2 + 24}" y="${ly - 1}" width="${W / 2 - len / 2 - 48}" height="2"/>
     </g>
-    <g class="flicker"><text x="${W / 2}" y="${H / 2 + 10}" text-anchor="middle" font-family="${MONO}" font-size="28" font-weight="800" letter-spacing="4" fill="url(#neon)" filter="url(#glow)" textLength="${len}" lengthAdjust="spacingAndGlyphs">${esc(label)}</text></g>
-    ${sub ? `<text x="${W - 24}" y="${H - 8}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${C.dim}" letter-spacing="2">${esc(sub)}</text>` : ""}
+    <g class="flicker"><text x="${W / 2}" y="${ty}" text-anchor="middle" font-family="${MONO}" font-size="28" font-weight="800" letter-spacing="4" fill="url(#neon)" filter="url(#glow)" textLength="${len}" lengthAdjust="spacingAndGlyphs">${esc(label)}</text></g>
+    ${sub ? `<text x="${W - 24}" y="${H - 9}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${C.dim}" letter-spacing="2">${esc(sub)}</text>` : ""}
   </g>
   <rect x="0.75" y="0.75" width="${W - 1.5}" height="${H - 1.5}" rx="11.5" fill="none" stroke="${C.line}" stroke-width="1.5"/>
 </svg>
