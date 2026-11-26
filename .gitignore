@@ -1,0 +1,5 @@
+node_modules/
+model/frames/
+*.log
+.env
+preview.html
