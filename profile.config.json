@@ -1,0 +1,22 @@
+{
+  "user": "IwataHiroki0827",
+  "displayName": "ROKI_NUO_SAIKYOU",
+  "tagline": "[ここに一言]",
+  "terminal": [
+    { "cmd": "whoami" },
+    { "out": "ROKI_NUO_SAIKYOU  // {tagline}" },
+    { "cmd": "ls ~/quests" },
+    { "out": "starfall-depths  bungo-zundamon  ClaudeAssetMCP" },
+    { "cmd": "cat loadout.txt" },
+    { "out": "TypeScript / Python / browser games / MCP / ML competitions" }
+  ],
+  "stages": [
+    { "repo": "starfall-depths" },
+    { "repo": "bungo-zundamon" },
+    { "repo": "ClaudeAssetMCP" },
+    {
+      "repo": "NightRainAutoRelicSelectionTool",
+      "description": "ナイトレイン(PS5)の遺物厳選を自動で行うツール"
+    }
+  ]
+}
