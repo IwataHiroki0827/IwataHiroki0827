@@ -1,0 +1,13 @@
+{
+  "name": "iwatahiroki0827-profile",
+  "private": true,
+  "type": "module",
+  "description": "GitHub profile README assets (self-hosted SVG cards and the 3D model GIF)",
+  "scripts": {
+    "build:svg": "node scripts/build-svgs.mjs",
+    "build:model": "python model/render_cpu.py"
+  },
+  "devDependencies": {
+    "three": "^0.181.0"
+  }
+}
