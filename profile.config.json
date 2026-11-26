@@ -1,7 +1,7 @@
 {
   "user": "IwataHiroki0827",
   "displayName": "ROKI_NUO_SAIKYOU",
-  "tagline": "[ここに一言]",
+  "tagline": "プロフィールを見にきてくれてありがとう！",
   "terminal": [
     { "cmd": "whoami" },
     { "out": "ROKI_NUO_SAIKYOU  // {tagline}" },

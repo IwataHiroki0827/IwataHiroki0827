@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="282" viewBox="0 0 900 282" role="img" aria-labelledby="title">
-  <title id="title">$ whoami / ROKI_NUO_SAIKYOU  // [ここに一言] / $ ls ~/quests / starfall-depths  bungo-zundamon  ClaudeAssetMCP / $ cat loadout.txt / TypeScript / Python / browser games / MCP / ML competitions</title>
+  <title id="title">$ whoami / ROKI_NUO_SAIKYOU  // プロフィールを見にきてくれてありがとう！ / $ ls ~/quests / starfall-depths  bungo-zundamon  ClaudeAssetMCP / $ cat loadout.txt / TypeScript / Python / browser games / MCP / ML competitions</title>
   <style>
     .cur { animation: blink 0.9s steps(1) infinite; }
     @keyframes blink { 50% { opacity: 0; } }
@@ -26,9 +26,9 @@
     <clipPath id="c0"><rect x="49.6" y="52" width="0" height="32"><animate attributeName="width" values="0;10.8;21.6;32.4;43.2;54.0;64.8" keyTimes="0;0.0673;0.0735;0.0797;0.0859;0.0920;0.0982" calcMode="discrete" dur="8.91s" repeatCount="indefinite"/></rect></clipPath>
     <text x="28" y="74" fill="#a3ff12" font-weight="700" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.0505" calcMode="discrete" dur="8.91s" repeatCount="indefinite"/>$</text>
     <text x="49.6" y="74" fill="#e6e9ff" textLength="64.8" lengthAdjust="spacingAndGlyphs" clip-path="url(#c0)">whoami</text>
-    <clipPath id="c1"><rect x="28" y="84" width="0" height="32"><animate attributeName="width" values="0;356.4" keyTimes="0;0.1605" calcMode="discrete" dur="8.91s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c1"><rect x="28" y="84" width="0" height="32"><animate attributeName="width" values="0;658.8" keyTimes="0;0.1605" calcMode="discrete" dur="8.91s" repeatCount="indefinite"/></rect></clipPath>
     
-    <text x="28" y="106" fill="#00f0ff" textLength="356.4" lengthAdjust="spacingAndGlyphs" clip-path="url(#c1)">ROKI_NUO_SAIKYOU  // [ここに一言]</text>
+    <text x="28" y="106" fill="#00f0ff" textLength="658.8" lengthAdjust="spacingAndGlyphs" clip-path="url(#c1)">ROKI_NUO_SAIKYOU  // プロフィールを見にきてくれてありがとう！</text>
     <clipPath id="c2"><rect x="49.6" y="116" width="0" height="32"><animate attributeName="width" values="0;10.8;21.6;32.4;43.2;54.0;64.8;75.6;86.4;97.2;108.0;118.8" keyTimes="0;0.1998;0.2059;0.2121;0.2183;0.2245;0.2306;0.2368;0.2430;0.2492;0.2553;0.2615" calcMode="discrete" dur="8.91s" repeatCount="indefinite"/></rect></clipPath>
     <text x="28" y="138" fill="#a3ff12" font-weight="700" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.1829" calcMode="discrete" dur="8.91s" repeatCount="indefinite"/>$</text>
     <text x="49.6" y="138" fill="#e6e9ff" textLength="118.8" lengthAdjust="spacingAndGlyphs" clip-path="url(#c2)">ls ~/quests</text>
