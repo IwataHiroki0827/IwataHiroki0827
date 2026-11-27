@@ -1,5 +1,6 @@
 // GitHub City: the last year of contributions as a neon low-poly city.
 // One block per day (53 weeks x 7 days); building height follows the day's contribution count.
+// Fixed three-quarter view (no turning): only the beacons on the busiest days blink, which keeps the GIF small.
 // Data: model/data/contrib.json written by scripts/build-svgs.mjs
 //   { user, total, from, to, weeks: [[{ date, count }, ...], ...] }
 import * as THREE from "three";
@@ -7,11 +8,13 @@ import { COLORS, withEdges, lit, makeCamera, floorGrid } from "./common.mjs";
 
 const { CYAN, MAGENTA, VIOLET } = COLORS;
 const TAU = Math.PI * 2;
+const VIEW_YAW = -0.24; // radians: the older weeks recede to the back left
 
 export const meta = {
   out: "assets/model/github-city.gif",
   size: [600, 320],
-  frames: 40,
+  frames: 16,
+  fps: 8,
   colors: 72,
   labelLeft: "CITY",
   labelLeftColor: [0, 240, 255],
@@ -34,7 +37,7 @@ export function createScene(data) {
   if (!data) throw new Error("city needs contribution data: --data model/data/contrib.json");
   const scene = new THREE.Scene();
   scene.fog = new THREE.Fog(0x070a18, 11, 24);
-  const camera = makeCamera(30, 600 / 320, [0, 4.2, 11.2], [0, 0.35, 0]);
+  const camera = makeCamera(30, 600 / 320, [-0.4, 4.8, 12.6], [-0.4, 0.3, 0]);
   scene.add(new THREE.HemisphereLight(0x8b5cf6, 0x05040d, 1.5));
   const keyL = new THREE.PointLight(CYAN, 36, 22);
   keyL.position.set(4, 5, 5);
@@ -99,14 +102,12 @@ export function createScene(data) {
   const white = new THREE.Color(0xffffff), cyan = new THREE.Color(CYAN);
 
   function update(p) {
-    // eased turn: lingers on the long sides of the city
-    city.rotation.y = -(p * TAU - 0.38 * Math.sin(2 * p * TAU));
+    city.rotation.y = VIEW_YAW;
     beaconMeshes.forEach((m) => {
-      const on = Math.sin(p * TAU * 4 + m.userData.i * 1.7) > 0.3;
+      const on = Math.sin(p * TAU * 2 + m.userData.i * 1.7) > 0.3;
       m.material.color.copy(on ? white : cyan).multiplyScalar(on ? 1 : 0.4);
     });
-    // the floor grid stays still here: a static background keeps the GIF small (unchanged pixels are skipped)
-    keyL.position.x = Math.cos(p * TAU) * 4.5;
+    // grid and lights stay still: unchanged pixels are skipped in the GIF, so only the beacons cost bytes
     scene.updateMatrixWorld(true);
   }
   return { scene, camera, update };

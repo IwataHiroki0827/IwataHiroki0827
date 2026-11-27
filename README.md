@@ -73,7 +73,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/model/github-city.gif" width="600" alt="直近1年のコントリビューションを、1日1棟のビルにしたネオンの街(回転する)">
+  <img src="assets/model/github-city.gif" width="600" alt="直近1年のコントリビューションを、1日1棟のビルにしたネオンの街(斜め上からの固定の眺め。多い日のビルの上の光が点滅する)">
 </p>
 
 <p align="center">
