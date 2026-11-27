@@ -1,17 +1,16 @@
 // Original low-poly game controller + voxel "ROKI" logo + orbiting crystals.
-// Shared by scene.html (WebGL + bloom in a browser) and export_frames.mjs (Node, no browser).
+// Rendered on the CPU by model/export_frames.mjs + model/render_cpu.py (see model/scenes/common.mjs).
 import * as THREE from "three";
+import { COLORS, withEdges } from "./common.mjs";
 
-export const COLORS = { CYAN: 0x00f0ff, MAGENTA: 0xff2bd6, VIOLET: 0x8b5cf6, LIME: 0xa3ff12, AMBER: 0xffb020 };
 const { CYAN, MAGENTA, VIOLET, LIME, AMBER } = COLORS;
 
-const edgeMat = (color) => new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.95 });
-function withEdges(geo, mat, color, angle = 18) {
-  const g = new THREE.Group();
-  g.add(new THREE.Mesh(geo, mat));
-  g.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo, angle), edgeMat(color)));
-  return g;
-}
+export const meta = {
+  out: "assets/model/roki-controller.gif",
+  labelLeft: "P1",
+  labelRight: "ROKI.SYS",
+  pins: [[163, 255, 18], [120, 200, 20], [255, 176, 32], [200, 140, 30], [0, 240, 255], [255, 43, 214], [255, 255, 255]],
+};
 
 export function createScene() {
   const scene = new THREE.Scene();
@@ -180,5 +179,5 @@ export function createScene() {
     scene.updateMatrixWorld(true);
   }
 
-  return { scene, camera, update, lights: { keyL, rimL } };
+  return { scene, camera, update, lights: [keyL, rimL] };
 }

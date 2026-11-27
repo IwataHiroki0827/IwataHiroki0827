@@ -2,10 +2,12 @@
   "name": "iwatahiroki0827-profile",
   "private": true,
   "type": "module",
-  "description": "GitHub profile README assets (self-hosted SVG cards and the 3D model GIF)",
+  "description": "GitHub profile README assets (self-hosted SVG cards and the CPU-rendered 3D GIFs)",
   "scripts": {
     "build:svg": "node scripts/build-svgs.mjs",
-    "build:model": "python model/render_cpu.py"
+    "build:models": "python model/render_cpu.py --scene all",
+    "build:city": "python model/render_cpu.py --scene city --data model/data/contrib.json",
+    "build:spotify": "node scripts/spotify.mjs"
   },
   "devDependencies": {
     "three": "^0.181.0"
