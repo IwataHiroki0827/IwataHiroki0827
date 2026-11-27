@@ -1,22 +1,201 @@
 {
   "user": "IwataHiroki0827",
   "displayName": "ROKI_NUO_SAIKYOU",
-  "tagline": "プロフィールを見にきてくれてありがとう！",
-  "terminal": [
-    { "cmd": "whoami" },
-    { "out": "ROKI_NUO_SAIKYOU  // {tagline}" },
-    { "cmd": "ls ~/quests" },
-    { "out": "starfall-depths  bungo-zundamon  ClaudeAssetMCP" },
-    { "cmd": "cat loadout.txt" },
-    { "out": "TypeScript / Python / browser games / MCP / ML competitions" }
-  ],
-  "stages": [
-    { "repo": "starfall-depths" },
-    { "repo": "bungo-zundamon" },
-    { "repo": "ClaudeAssetMCP" },
+  "tagline": "Thanks for visiting my profile!",
+  "location": "Japan",
+  "locationLocal": "日本",
+  "kaggle": {
+    "url": "https://www.kaggle.com/iwatahiroki",
+    "category": "Competitions",
+    "tier": "Expert"
+  },
+  "certifications": [
     {
-      "repo": "NightRainAutoRelicSelectionTool",
-      "description": "ナイトレイン(PS5)の遺物厳選を自動で行うツール"
+      "short": "ES",
+      "name": "エンベデッドシステムスペシャリスト試験",
+      "issuer": "IPA"
+    },
+    {
+      "short": "AP",
+      "name": "応用情報技術者試験",
+      "issuer": "IPA"
+    },
+    {
+      "short": "FE",
+      "name": "基本情報技術者試験",
+      "issuer": "IPA"
+    },
+    {
+      "short": "G検定",
+      "name": "JDLA Deep Learning for GENERAL(G検定)",
+      "issuer": "JDLA"
+    },
+    {
+      "short": "AWS SAA",
+      "name": "AWS Certified Solutions Architect – Associate",
+      "issuer": "AWS"
+    },
+    {
+      "short": "AWS CLF",
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "AWS"
+    }
+  ],
+  "loadout": [
+    {
+      "group": "LANG",
+      "items": [
+        {
+          "icon": "TypeScript.svg",
+          "label": "TypeScript"
+        },
+        {
+          "icon": "JavaScript.svg",
+          "label": "JavaScript"
+        },
+        {
+          "icon": "Python-Dark.svg",
+          "label": "Python"
+        },
+        {
+          "icon": "CS.svg",
+          "label": "C#"
+        },
+        {
+          "icon": "Powershell-Dark.svg",
+          "label": "PowerShell"
+        },
+        {
+          "icon": "HTML.svg",
+          "label": "HTML"
+        },
+        {
+          "icon": "CSS.svg",
+          "label": "CSS"
+        }
+      ]
+    },
+    {
+      "group": "WEB",
+      "items": [
+        {
+          "icon": "React-Dark.svg",
+          "label": "React"
+        },
+        {
+          "icon": "NextJS-Dark.svg",
+          "label": "Next.js"
+        },
+        {
+          "icon": "Vite-Dark.svg",
+          "label": "Vite"
+        },
+        {
+          "icon": "TailwindCSS-Dark.svg",
+          "label": "Tailwind"
+        },
+        {
+          "icon": "ThreeJS-Dark.svg",
+          "label": "three.js"
+        },
+        {
+          "icon": "NodeJS-Dark.svg",
+          "label": "Node.js"
+        },
+        {
+          "icon": "ExpressJS-Dark.svg",
+          "label": "Express"
+        },
+        {
+          "icon": "FastAPI.svg",
+          "label": "FastAPI"
+        }
+      ]
+    },
+    {
+      "group": "AI / ML",
+      "items": [
+        {
+          "icon": "PyTorch-Dark.svg",
+          "label": "PyTorch"
+        },
+        {
+          "icon": "ScikitLearn-Dark.svg",
+          "label": "sklearn"
+        },
+        {
+          "icon": "OpenCV-Dark.svg",
+          "label": "OpenCV"
+        },
+        {
+          "text": "Comfy",
+          "text2": "UI",
+          "textSize": 62,
+          "label": "ComfyUI"
+        },
+        {
+          "text": "Claude",
+          "text2": "API",
+          "textSize": 56,
+          "label": "Claude API"
+        }
+      ]
+    },
+    {
+      "group": "GAME/APP",
+      "items": [
+        {
+          "icon": "Godot-Dark.svg",
+          "label": "Godot"
+        },
+        {
+          "icon": "UnrealEngine.svg",
+          "label": "Unreal"
+        },
+        {
+          "icon": "QT-Dark.svg",
+          "label": "Qt"
+        },
+        {
+          "icon": "Electron.svg",
+          "label": "Electron"
+        }
+      ]
+    },
+    {
+      "group": "OPS/TEST",
+      "items": [
+        {
+          "icon": "Cloudflare-Dark.svg",
+          "label": "Cloudflare"
+        },
+        {
+          "icon": "AWS-Dark.svg",
+          "label": "AWS"
+        },
+        {
+          "icon": "Supabase-Dark.svg",
+          "label": "Supabase"
+        },
+        {
+          "icon": "Docker.svg",
+          "label": "Docker"
+        },
+        {
+          "icon": "GithubActions-Dark.svg",
+          "label": "Actions"
+        },
+        {
+          "icon": "Vitest-Dark.svg",
+          "label": "Vitest"
+        },
+        {
+          "text": "Play",
+          "text2": "wright",
+          "textSize": 52,
+          "label": "Playwright"
+        }
+      ]
     }
   ]
 }

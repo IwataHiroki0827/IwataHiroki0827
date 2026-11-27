@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="64" viewBox="0 0 900 64" role="img" aria-labelledby="title">
-  <title id="title">SELECT STAGE</title>
+  <title id="title">PLAYER DATA</title>
   <style>
     .flicker { animation: fl 6s linear infinite; }
     @keyframes fl { 0%,30%,33%,36%,100% { opacity: 1; } 31.5% { opacity: .35; } 34.5% { opacity: .6; } }
@@ -31,10 +31,10 @@
     <g class="sweep"><rect x="-120" width="120" height="64" fill="url(#shine)"/></g>
     <!-- rects, not lines: a horizontal line has a zero-height bbox, so an objectBoundingBox gradient/filter paints nothing -->
     <g fill="url(#neon)" filter="url(#lineglow)">
-      <rect x="24" y="30" width="246" height="2"/>
-      <rect x="630" y="30" width="246" height="2"/>
+      <rect x="24" y="30" width="259" height="2"/>
+      <rect x="617" y="30" width="259" height="2"/>
     </g>
-    <g class="flicker"><text x="450" y="42" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="28" font-weight="800" letter-spacing="4" fill="url(#neon)" filter="url(#glow)" textLength="312" lengthAdjust="spacingAndGlyphs">SELECT STAGE</text></g>
+    <g class="flicker"><text x="450" y="42" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="28" font-weight="800" letter-spacing="4" fill="url(#neon)" filter="url(#glow)" textLength="286" lengthAdjust="spacingAndGlyphs">PLAYER DATA</text></g>
     
   </g>
   <rect x="0.75" y="0.75" width="898.5" height="62.5" rx="11.5" fill="none" stroke="#2a2f55" stroke-width="1.5"/>

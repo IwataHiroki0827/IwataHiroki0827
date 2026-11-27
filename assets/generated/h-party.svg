@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="64" viewBox="0 0 900 64" role="img" aria-labelledby="title">
+  <title id="title">RIG &amp; PARTY</title>
+  <style>
+    .flicker { animation: fl 6s linear infinite; }
+    @keyframes fl { 0%,30%,33%,36%,100% { opacity: 1; } 31.5% { opacity: .35; } 34.5% { opacity: .6; } }
+    .sweep { animation: sw 3.2s ease-in-out infinite; }
+    @keyframes sw { 0% { transform: translateX(-140px); } 100% { transform: translateX(1040px); } }
+  </style>
+  <defs>
+    
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00f0ff"/>
+      <stop offset="0.5" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#ff2bd6"/>
+    </linearGradient>
+    
+    <filter id="glow" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
+    <filter id="lineglow" filterUnits="userSpaceOnUse" x="0" y="0" width="900" height="64">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="card"><rect width="900" height="64" rx="12"/></clipPath>
+    <linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="900" height="64" fill="#0b1022"/>
+    <g class="sweep"><rect x="-120" width="120" height="64" fill="url(#shine)"/></g>
+    <!-- rects, not lines: a horizontal line has a zero-height bbox, so an objectBoundingBox gradient/filter paints nothing -->
+    <g fill="url(#neon)" filter="url(#lineglow)">
+      <rect x="24" y="30" width="259" height="2"/>
+      <rect x="617" y="30" width="259" height="2"/>
+    </g>
+    <g class="flicker"><text x="450" y="42" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="28" font-weight="800" letter-spacing="4" fill="url(#neon)" filter="url(#glow)" textLength="286" lengthAdjust="spacingAndGlyphs">RIG &amp; PARTY</text></g>
+    
+  </g>
+  <rect x="0.75" y="0.75" width="898.5" height="62.5" rx="11.5" fill="none" stroke="#2a2f55" stroke-width="1.5"/>
+</svg>
