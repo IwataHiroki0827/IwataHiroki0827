@@ -2,3 +2,5 @@ node_modules/
 *.log
 .env
 preview.html
+model/data/
+assets/generated/spotify-sample.svg

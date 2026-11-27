@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300" role="img" aria-labelledby="title">
+  <title id="title">PLAYER DATA: based in Japan. Kaggle Competitions Expert (kaggle.com/iwatahiroki)</title>
+  <style>
+    .pulse { animation: p 2.4s ease-in-out infinite; }
+    @keyframes p { 0%,100% { opacity: .6; } 50% { opacity: 1; } }
+    .spin { animation: s 6s linear infinite; transform-origin: 74px 176px; }
+    @keyframes s { to { transform: rotate(360deg); } }
+  </style>
+  <defs>
+    
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00f0ff"/>
+      <stop offset="0.5" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#ff2bd6"/>
+    </linearGradient>
+    
+    <filter id="glow" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
+    <filter id="medalglow" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#000" opacity="0.28"/>
+    </pattern>
+    <linearGradient id="rank" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c4a1ff"/>
+      <stop offset="1" stop-color="#ff2bd6"/>
+    </linearGradient>
+    <clipPath id="card"><rect width="500" height="300" rx="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#card)" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="14">
+    <rect width="500" height="300" fill="#0b1022"/>
+    <rect x="10" y="10" width="480" height="280" rx="8" fill="none" stroke="#dfe4ff" stroke-opacity="0.75" stroke-width="2"/>
+    <text x="26" y="44" font-size="20" font-weight="800" letter-spacing="3" fill="url(#neon)" filter="url(#glow)">ID CARD</text>
+    <text x="474" y="44" text-anchor="end" fill="#8a90b8" font-size="12">@IwataHiroki0827</text>
+
+    <path d="M38 64 c-7 0 -12 5 -12 12 c0 9 12 21 12 21 s12 -12 12 -21 c0 -7 -5 -12 -12 -12 z" fill="none" stroke="#ff8c69" stroke-width="2.5" filter="url(#glow)"/>
+    <circle cx="38" cy="76" r="4" fill="#ff8c69"/>
+    <text x="60" y="76" fill="#8a90b8" font-size="11" letter-spacing="2">LOCATION</text>
+    <text x="60" y="96" fill="#e6e9ff" font-size="20" font-weight="800" letter-spacing="3">JAPAN<tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif" font-size="14" font-weight="700" fill="#ff8c69" letter-spacing="1">  日本</tspan></text>
+    <text x="474" y="96" text-anchor="end" fill="#8a90b8" font-size="11">UTC+9</text>
+    <line x1="26" y1="114" x2="474" y2="114" stroke="#2a2f55" stroke-width="1.5"/>
+
+    <g filter="url(#medalglow)">
+      <polygon points="52,202 40,242 54,232 64,246 70,206" fill="#5b21b6"/>
+      <polygon points="96,202 108,242 94,232 84,246 78,206" fill="#5b21b6"/>
+      <polygon points="110.4,197.0 74.0,218.0 37.6,197.0 37.6,155.0 74.0,134.0 110.4,155.0" fill="#1b1240" stroke="url(#rank)" stroke-width="4"/>
+    </g>
+    <g class="spin"><polygon points="101.7,192.0 74.0,208.0 46.3,192.0 46.3,160.0 74.0,144.0 101.7,160.0" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="6 5"/></g>
+    <polygon points="74.0,159.0 78.1,170.3 90.2,170.7 80.7,178.2 84.0,189.8 74.0,183.0 64.0,189.8 67.3,178.2 57.8,170.7 69.9,170.3" fill="url(#rank)"/>
+
+    <text x="150" y="146" fill="#8a90b8" font-size="11" letter-spacing="3">KAGGLE  ·  RANK</text>
+    <text x="150" y="172" fill="#e6e9ff" font-size="18" font-weight="800" letter-spacing="2">COMPETITIONS</text>
+    <text x="150" y="206" font-size="30" font-weight="800" letter-spacing="4" fill="url(#rank)" filter="url(#glow)">EXPERT</text>
+    
+    <rect x="150" y="226" width="54" height="8" rx="2" fill="#8b5cf6"  opacity="0.55"/>
+    <text x="177" y="248" text-anchor="middle" font-size="8" letter-spacing="0.5" fill="#8a90b8" >NOVICE</text>
+    <rect x="212" y="226" width="54" height="8" rx="2" fill="#8b5cf6"  opacity="0.55"/>
+    <text x="239" y="248" text-anchor="middle" font-size="8" letter-spacing="0.5" fill="#8a90b8" >CONTRIBUTOR</text>
+    <rect x="274" y="226" width="54" height="8" rx="2" fill="url(#rank)"  opacity="1"/>
+    <text x="301" y="248" text-anchor="middle" font-size="8" letter-spacing="0.5" fill="#e6e9ff" font-weight="800">EXPERT</text>
+    <rect x="336" y="226" width="54" height="8" rx="2" fill="#1a2044" stroke="#2a2f55" opacity="1"/>
+    <text x="363" y="248" text-anchor="middle" font-size="8" letter-spacing="0.5" fill="#8a90b8" >MASTER</text>
+    <rect x="398" y="226" width="54" height="8" rx="2" fill="#1a2044" stroke="#2a2f55" opacity="1"/>
+    <text x="425" y="248" text-anchor="middle" font-size="8" letter-spacing="0.5" fill="#8a90b8" >GRANDMASTER</text>
+
+    <text x="26" y="274" fill="#8a90b8" font-size="11">MSG <tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif" fill="#e6e9ff" font-size="13">プロフィールを見にきてくれてありがとう！</tspan></text>
+    <text x="474" y="274" text-anchor="end" fill="#00f0ff" font-size="11" font-weight="700" class="pulse">kaggle.com/iwatahiroki ▶</text>
+    <rect width="500" height="300" fill="url(#scan)"/>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="588" height="170" viewBox="0 0 588 170" role="img" aria-labelledby="title">
+  <title id="title">CERTIFICATIONS: エンベデッドシステムスペシャリスト試験 / 応用情報技術者試験 / 基本情報技術者試験 / JDLA Deep Learning for GENERAL(G検定) / AWS Certified Solutions Architect – Associate / AWS Certified Cloud Practitioner</title>
+  <style>
+    .pulse { animation: p 2.4s ease-in-out infinite; }
+    @keyframes p { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+  </style>
+  <defs>
+    <filter id="glow" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+  <g font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace">
+    <g>
+      <title>エンベデッドシステムスペシャリスト試験 (IPA)</title>
+      <path d="M14,2 H186 V66 L174,78 H2 V14 Z" fill="#0b1022" stroke="#00f0ff" stroke-width="1.6"/>
+      <rect x="3" y="14" width="5" height="63" fill="#00f0ff" opacity="0.85"/>
+      <text x="20" y="24" font-size="10" letter-spacing="2" fill="#00f0ff" font-weight="700">IPA</text>
+      <path d="M156 18 l5 5 l9 -10" fill="none" stroke="#00f0ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="pulse" style="animation-delay:0.0s"/>
+      <text x="20" y="58" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif" font-size="24" font-weight="800" letter-spacing="1" fill="#e6e9ff" filter="url(#glow)">ES</text>
+    </g>
+    <g>
+      <title>応用情報技術者試験 (IPA)</title>
+      <path d="M214,2 H386 V66 L374,78 H202 V14 Z" fill="#0b1022" stroke="#00f0ff" stroke-width="1.6"/>
+      <rect x="203" y="14" width="5" height="63" fill="#00f0ff" opacity="0.85"/>
+      <text x="220" y="24" font-size="10" letter-spacing="2" fill="#00f0ff" font-weight="700">IPA</text>
+      <path d="M356 18 l5 5 l9 -10" fill="none" stroke="#00f0ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="pulse" style="animation-delay:0.3s"/>
+      <text x="220" y="58" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif" font-size="24" font-weight="800" letter-spacing="1" fill="#e6e9ff" filter="url(#glow)">AP</text>
+    </g>
+    <g>
+      <title>基本情報技術者試験 (IPA)</title>
+      <path d="M414,2 H586 V66 L574,78 H402 V14 Z" fill="#0b1022" stroke="#00f0ff" stroke-width="1.6"/>
+      <rect x="403" y="14" width="5" height="63" fill="#00f0ff" opacity="0.85"/>
+      <text x="420" y="24" font-size="10" letter-spacing="2" fill="#00f0ff" font-weight="700">IPA</text>
+      <path d="M556 18 l5 5 l9 -10" fill="none" stroke="#00f0ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="pulse" style="animation-delay:0.6s"/>
+      <text x="420" y="58" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif" font-size="24" font-weight="800" letter-spacing="1" fill="#e6e9ff" filter="url(#glow)">FE</text>
+    </g>
+    <g>
+      <title>JDLA Deep Learning for GENERAL(G検定) (JDLA)</title>
+      <path d="M14,92 H186 V156 L174,168 H2 V104 Z" fill="#0b1022" stroke="#a3ff12" stroke-width="1.6"/>
+      <rect x="3" y="104" width="5" height="63" fill="#a3ff12" opacity="0.85"/>
+      <text x="20" y="114" font-size="10" letter-spacing="2" fill="#a3ff12" font-weight="700">JDLA</text>
+      <path d="M156 108 l5 5 l9 -10" fill="none" stroke="#a3ff12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="pulse" style="animation-delay:0.9s"/>
+      <text x="20" y="148" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif" font-size="24" font-weight="800" letter-spacing="1" fill="#e6e9ff" filter="url(#glow)">G検定</text>
+    </g>
+    <g>
+      <title>AWS Certified Solutions Architect – Associate (AWS)</title>
+      <path d="M214,92 H386 V156 L374,168 H202 V104 Z" fill="#0b1022" stroke="#ffb020" stroke-width="1.6"/>
+      <rect x="203" y="104" width="5" height="63" fill="#ffb020" opacity="0.85"/>
+      <text x="220" y="114" font-size="10" letter-spacing="2" fill="#ffb020" font-weight="700">AWS</text>
+      <path d="M356 108 l5 5 l9 -10" fill="none" stroke="#ffb020" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="pulse" style="animation-delay:1.2s"/>
+      <text x="220" y="148" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif" font-size="24" font-weight="800" letter-spacing="1" fill="#e6e9ff" filter="url(#glow)">AWS SAA</text>
+    </g>
+    <g>
+      <title>AWS Certified Cloud Practitioner (AWS)</title>
+      <path d="M414,92 H586 V156 L574,168 H402 V104 Z" fill="#0b1022" stroke="#ffb020" stroke-width="1.6"/>
+      <rect x="403" y="104" width="5" height="63" fill="#ffb020" opacity="0.85"/>
+      <text x="420" y="114" font-size="10" letter-spacing="2" fill="#ffb020" font-weight="700">AWS</text>
+      <path d="M556 108 l5 5 l9 -10" fill="none" stroke="#ffb020" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="pulse" style="animation-delay:1.5s"/>
+      <text x="420" y="148" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif" font-size="24" font-weight="800" letter-spacing="1" fill="#e6e9ff" filter="url(#glow)">AWS CLF</text>
+    </g>
+  </g>
+</svg>
