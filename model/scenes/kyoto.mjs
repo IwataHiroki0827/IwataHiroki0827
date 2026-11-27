@@ -10,7 +10,7 @@ export const meta = {
   out: "assets/model/neon-kyoto.gif",
   labelLeft: "JP",
   labelLeftColor: [255, 90, 54],
-  labelRight: "KYOTO.SYS",
+  labelRight: "",
   bgTop: [0x05, 0x08, 0x16],
   bgBottom: [0x1a, 0x08, 0x26],
   glow: [70, 60, 200],

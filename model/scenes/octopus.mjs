@@ -1,5 +1,5 @@
 // Original low-poly octopus in Claude-like coral / terracotta tones, wearing a neon gaming headset.
-// "P2 / CO-OP": the AI partner next to player 1. Not a copy of any official artwork or logo.
+// "P2 / CLAUDE.SYS": the AI partner next to player 1. Not a copy of any official artwork or logo.
 import * as THREE from "three";
 import { COLORS, withEdges, lit, glow, makeCamera, floorGrid, scrollGrid } from "./common.mjs";
 
@@ -12,7 +12,7 @@ export const meta = {
   out: "assets/model/claude-octopus.gif",
   labelLeft: "P2",
   labelLeftColor: [255, 140, 105],
-  labelRight: "CO-OP.SYS",
+  labelRight: "CLAUDE.SYS",
   bgTop: [0x0a, 0x08, 0x16],
   bgBottom: [0x26, 0x0c, 0x1c],
   glow: [230, 110, 80],
