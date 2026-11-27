@@ -56,7 +56,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/generated/skills.svg" width="556" alt="使っている技術: TypeScript, Python, Node.js, three.js, PyTorch, ComfyUI, Cloudflare, GitHub Actions, Vite, Vitest">
+  <img src="assets/generated/skills.svg" width="100%" alt="使っている技術(LANG / WEB / AI・ML / GAME・APP / OPS・TEST の 5 つの行。公開・非公開のリポジトリで実際に使っているもの)">
 </p>
 
 <p align="center">

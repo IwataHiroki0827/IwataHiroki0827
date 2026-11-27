@@ -439,15 +439,24 @@ function certsSvg(certs) {
 }
 
 // ---------------------------------------------------------------- loadout (skill icons, vendored, MIT)
-async function skillsSvg(items) {
-  const cols = 5;
-  const tile = 64, cw = 104, ch = 98, pad = 18;
-  const W = cols * cw + pad * 2;
-  const H = Math.ceil(items.length / cols) * ch + pad * 2 - 6;
+// groups: [{ group: "LANG", items: [{ icon?: file, text?, text2?, textSize?, label }] }], one row per group
+async function skillsSvg(groups) {
+  const tile = 56, cw = 82, ch = 90, pad = 18, LW = 96;
+  const maxCols = Math.max(...groups.map((g) => g.items.length));
+  const W = pad * 2 + LW + maxCols * cw;
+  const H = pad * 2 + groups.length * ch - 8;
+  const slots = groups.flatMap((g, r) => g.items.map((it, c) => ({ it, r, c })));
+  const rowsDecor = groups.map((g, r) => {
+    const y = pad + r * ch;
+    return `
+    <text x="${pad + 4}" y="${y + 26}" font-family="${MONO}" font-size="10" fill="${C.dim}" letter-spacing="2">SLOT ${r + 1}</text>
+    <text x="${pad + 4}" y="${y + 46}" font-family="${MONO}" font-size="15" font-weight="800" letter-spacing="1" fill="url(#neon)">${esc(g.group)}</text>
+    ${r ? `<line x1="${pad}" y1="${y - 8}" x2="${W - pad}" y2="${y - 8}" stroke="${C.line}" stroke-width="1" stroke-dasharray="3 4"/>` : ""}`;
+  });
   const parts = await Promise.all(
-    items.map(async (it, i) => {
-      const x = pad + (i % cols) * cw + (cw - tile) / 2;
-      const y = pad + Math.floor(i / cols) * ch;
+    slots.map(async ({ it, r, c }, i) => {
+      const x = pad + LW + c * cw + (cw - tile) / 2;
+      const y = pad + r * ch;
       let inner;
       if (it.icon) {
         const raw = await readFile(join(ROOT, "assets", "icons", "skill-icons", it.icon), "utf-8");
@@ -464,14 +473,15 @@ async function skillsSvg(items) {
     <g>
       <title>${esc(it.label)}</title>
       <svg x="${x}" y="${y}" width="${tile}" height="${tile}" viewBox="0 0 256 256">${inner}</svg>
-      <text x="${x + tile / 2}" y="${y + tile + 20}" text-anchor="middle" font-family="${MONO}" font-size="12" fill="${C.text}">${esc(it.label)}</text>
+      <text x="${x + tile / 2}" y="${y + tile + 16}" text-anchor="middle" font-family="${MONO}" font-size="11" fill="${C.text}">${esc(it.label)}</text>
     </g>`;
     }),
   );
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="title">
-  <title id="title">LOADOUT: ${esc(items.map((i) => i.label).join(", "))}</title>
+  <title id="title">LOADOUT: ${esc(groups.map((g) => `${g.group}: ${g.items.map((i) => i.label).join(", ")}`).join(" / "))}</title>
+  <defs>${neonGradient("neon")}</defs>
   <rect width="${W}" height="${H}" rx="14" fill="${C.panel}"/>
-  <rect x="0.75" y="0.75" width="${W - 1.5}" height="${H - 1.5}" rx="13.5" fill="none" stroke="${C.line}" stroke-width="1.5"/>${parts.join("")}
+  <rect x="0.75" y="0.75" width="${W - 1.5}" height="${H - 1.5}" rx="13.5" fill="none" stroke="${C.line}" stroke-width="1.5"/>${rowsDecor.join("")}${parts.join("")}
 </svg>
 `;
 }
